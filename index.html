@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Documentations App LunaMama</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#WebApp">WebApp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#MobileApp">MobileApp</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <br id="WebApp">
+        <br>
+        <br>
+
+        <div class="center">
+            <h5>Sovelluksien dokumentaatio - Näyttö Careeria 2023</h2>
+                <p>Autor: Richard Rico</p>
+        </div>
+
+        <br>
+        <!-- WebApp -->
+        <div class="container">
+
+            <header>
+                <h1>Web Application: Luna Mama (Imetysohjausasiakkaiden esitietolomake)</h1>
+            </header>
+
+            <br>
+
+            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExample" data-slide-to="1"></li>
+                    <li data-target="#carouselExample" data-slide-to="2"></li>
+                    <li data-target="#carouselExample" data-slide-to="3"></li>
+                    <li data-target="#carouselExample" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/1.JPG" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/2.JPG" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/3.JPG" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/4.JPG" class="d-block w-100" alt="Slide 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/5.JPG" class="d-block w-100" alt="Slide 5">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <article>
+                <br>
+                <hr>
+                <h2>1. Backend</h2>
+                <ol>
+                    <li>REST API</li>
+                    <li>Mysql</li>
+                </ol>
+
+                <h3>Ohjelmointikielet</h3>
+                <ul>
+                    <li>C#</li>
+                    <li>SQl</li>
+                </ul>
+
+                <h3>Versionhallinta</h3>
+                <pre><code>- Git 
+- GitHub</code></pre>
+
+                <h3>Tietokanta Luna Mama</h3>
+                <ul>
+                    <li>Tietokantataulukot
+                        <ul>
+                            <li>Customers</li>
+                            <li>Lomake</li>
+                            <li>Users</li>
+                            <li>login</li>
+                        </ul>
+                        <p><img src="assets/img/sqlDiagram.JPG" alt=""></p>
+                    </li>
+                </ul>
+
+                <h3>REST API</h3>
+                <p>Yhdistin Rest API:n Luna mama -tietokannan kanssa ja loin erilaisia ​​luokkia models:ille,
+                    Controllers:ille ja Services:ille.</p>
+                <pre><code>- Models:
+  - Customers.cs
+  - Users.cs
+  - LoggedUser.cs
+  - Context.cs
+  - Credentials.cs
+  - AppSettings.cs
+  - Documentation.cs
+- Controllers:
+  - AuthenticationController.cs
+  - CustomersController.cs
+  - UsersController.cs
+  - DocumentationController.cs
+- Services:
+  - AuthenticateService.cs</code></pre>
+
+                <h3>Methods</h3>
+                <p>Käytetyt menetelmät ovat seuraavat:</p>
+                <pre><code>- GET, POST, PUT, DELETE.</code></pre>
+
+                <h3>Builder</h3>
+                <pre><code>- Program.cs</code></pre>
+
+                <h3>Connection</h3>
+                <pre><code>- Paikallinen: sqlserver
+- cloud: Azure</code></pre>
+
+                <h3>Deploy Azure</h3>
+            </article>
+
+            <article>
+                <h2>2. Frontend</h2>
+                <ul>
+                    <li>Reactjs</li>
+                    <li>Nodejs</li>
+                    <li>Bootstrap</li>
+                </ul>
+
+                <h3>Ohjelmointikielet, tagit ja suunnittelu.</h3>
+                <ul>
+                    <li>Javascript</li>
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>React-Bootstrap.</li>
+                </ul>
+
+                <h3>Versionhallinta</h3>
+                <pre><code>- Git
+- GitHub</code></pre>
+
+                <h3>Package</h3>
+                <p>Jotkut asennetut paketit ovat: axios, bootstrap, cors, md5, react, react-bootstrap, react-dom,
+                    react-password-checklist, react-router-dom, react-scripts, web-vitals.</p>
+
+                <h3>Components</h3>
+                <p>Tässä on lista projektin komponenteista:</p>
+                <ul>
+                    <li>Customer.jsx - (Määrittely)</li>
+                    <li>CustomerAdd.jsx - (Lisätä uusi asiakas lomake)</li>
+                    <li>CustomerEdit.jsx - (Muokata asiakastiedot ja lomake)</li>
+                    <li>CustomerList.jsx - (Katso asiakaslista)</li>
+                    <li>Login.jsx</li>
+                    <li>Message.jsx</li>
+                    <li>User.jsx - (Määrittely)</li>
+                    <li>UserAdd.jsx - (lisätä uusi käyttäjä)</li>
+                    <li>UserList.jsx - (katsoa käyttäjälista)</li>
+                </ul>
+
+                <h3>Services</h3>
+                <p>Yhdistin komponentit Backend:iin seuraavilla palveluilla:</p>
+                <ul>
+                    <li>Auth.js</li>
+                    <li>Customer.js</li>
+                    <li>User.js</li>
+                </ul>
+
+                <h3>Domain</h3>
+                <p>Frontend on isännöity yksityisellä Hosting:llä ja julkaistu seuraavassa verkkotunnuksessa:</p>
+                <p>Sub-Domain: "<a href="https://esitietolomake.luna-mama.com">https://esitietolomake.luna-mama.com</a>"
+                </p>
+                <br>
+                <h4>Demo</h4>
+                <p>If you want a demo credential to test the application please <a href="mailto:info@richard-rico.com">contact me</a></p>
+            </article>
+        </div>
+
+        <!-- MobileApp -->
+        <div class="container" id="MobileApp">
+
+            <br>
+            <br>
+            <br>
+
+            <header>
+                <h1>Mobile App (Xamarin Forms): Luna Mama appi v1.0 Android & iOS.</h1>
+            </header>
+
+            <br>
+
+            <div id="carouselExample2" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExample" data-slide-to="1"></li>
+                    <li data-target="#carouselExample" data-slide-to="2"></li>
+                    <li data-target="#carouselExample" data-slide-to="3"></li>
+                    <li data-target="#carouselExample" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/m1.png" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/m2.png" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/m3.png" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/m4.png" class="d-block w-100" alt="Slide 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/m5.png" class="d-block w-100" alt="Slide 5">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExample2" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExample2" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <article>
+                <br>
+                <hr>
+                <h2>UI framework</h2>
+                <ul>
+                    <li>Xamarin.Forms</li>
+                </ul>
+
+                <h3>Ohjelmointikielet</h3>
+                <ul>
+                    <li>C#</li>
+                </ul>
+
+                <h3>Versionhallinta</h3>
+                <pre><code>- Git
+- GitHub</code></pre>
+
+                <h3 id="solution">Solution</h3>
+                <pre><code>-<span class="ruby"> LunaMamaApp Kansiot
+</span>    -<span class="ruby"> Data
+</span>    -<span class="ruby"> Models
+</span>    -<span class="ruby"> ViewModels
+</span>    -<span class="ruby"> Views
+</span>    -<span class="ruby"> Resources
+                </span>
+-<span class="ruby"> LunaMamaApp Deploy
+</span>    -<span class="ruby"> App.xaml
+</span>        (C#) App.xaml.cs
+                </code></pre>
+                <h3 id="dependencies-packages-">Dependencies (Packages)</h3>
+                <p>Jotkut asennetut paketit ovat:</p>
+                <pre><code><span class="hljs-selector-tag">-</span> <span class="hljs-selector-tag">Xamarin</span><span class="hljs-selector-class">.Essential</span> 1<span class="hljs-selector-class">.7</span><span class="hljs-selector-class">.5</span>
+<span class="hljs-selector-tag">-</span> <span class="hljs-selector-tag">Xamarin</span><span class="hljs-selector-class">.Forms</span> 5<span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.0</span>
+<span class="hljs-selector-tag">-</span> <span class="hljs-selector-tag">CardsView</span> 2<span class="hljs-selector-class">.8</span><span class="hljs-selector-class">.1</span>
+<span class="hljs-selector-tag">-</span> <span class="hljs-selector-tag">CarouselView</span><span class="hljs-selector-class">.FormsPlugin</span> 6<span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.0</span>
+<span class="hljs-selector-tag">-</span> <span class="hljs-selector-tag">NETStandard</span><span class="hljs-selector-class">.Library</span> 2<span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.3</span>
+<span class="hljs-selector-tag">-</span> <span class="hljs-selector-tag">Xam</span><span class="hljs-selector-class">.Plugin</span><span class="hljs-selector-class">.SimpleAudioPlayer</span> 1<span class="hljs-selector-class">.6</span>
+                </code></pre>
+                <h3 id="views">Views</h3>
+                <p>Sovelluksessa on 6 erilaista sivua ja se käyttää NavigationPage ja asynkronisia menetelmiä niiden
+                    välillä liikkumiseen</p>
+                <p>Tässä on lista projektin Views:</p>
+                <ul>
+                    <li>
+                        <h5 id="counter-xaml-supistuslaskuri-">Counter.xaml - (Supistuslaskuri)</h5>
+                        <pre><code>  - (C#) Counter<span class="hljs-selector-class">.xaml</span><span class="hljs-selector-class">.cs</span>
+                </code></pre>
+                    </li>
+                    <li>
+                        <h5 id="home-xaml-kotisivu-">Home.xaml - (kotisivu)</h5>
+                        <pre><code>  - (C#) Home<span class="hljs-selector-class">.xaml</span><span class="hljs-selector-class">.cs</span>
+                </code></pre>
+                    </li>
+                    <li>
+                        <h5 id="soundlist-xaml-harjoitukset-ja-net-">SoundList.xaml - (Harjoitukset ja äänet)</h5>
+                        <pre><code>  - (C#) SoundList<span class="hljs-selector-class">.xaml</span><span class="hljs-selector-class">.cs</span>
+                </code></pre>
+                    </li>
+                    <li>
+                        <h5 id="menupositions-xaml-asennot-menu-">MenuPositions.xaml (Asennot Menu)</h5>
+                        <pre><code>  - (C#) MenuPositions<span class="hljs-selector-class">.xaml</span><span class="hljs-selector-class">.cs</span>
+                </code></pre>
+                    </li>
+                    <li>
+                        <h5 id="positionlist-xaml-avautumisvaihe-asennnot-lista-">PositionList.xaml (Avautumisvaihe
+                            asennnot lista)</h5>
+                        <pre><code>  - (C#) PositionList<span class="hljs-selector-class">.xaml</span><span class="hljs-selector-class">.cs</span>
+                </code></pre>
+                    </li>
+                    <li>
+                        <h5 id="positionlist2-xaml-ponnistusvaihe-asennot-lista-">PositionList2.xaml (Ponnistusvaihe
+                            asennot lista)</h5>
+                        <pre><code>  - (C#) PositionList2<span class="hljs-selector-class">.xaml</span><span class="hljs-selector-class">.cs</span> 
+                </code></pre>
+                    </li>
+                </ul>
+                <h3 id="viewmodels">ViewModels</h3>
+                <p>Tässä on lista jotkut projektin luokat (Class):</p>
+                <ul>
+                    <li>BaseViewModel.cs</li>
+                    <li>VMCounter.cs</li>
+                    <li>VMsoundList.cs</li>
+                    <li>VMmenuPositions.cs</li>
+                    <li>VMpositionlist.cs</li>
+                    <li>VMpositionlist2.cs</li>
+                </ul>
+                <h3 id="models">Models</h3>
+                <p>Tässä on lista luokista (Class) vastaavien objektien (Objects) kanssa:</p>
+                <ul>
+                    <li>SavedTimeItem.cs (counter)</li>
+                    <li>Mposition.cs</li>
+                    <li>Mposition.cs </li>
+                    <li>Msound.cs</li>
+                </ul>
+                <h3 id="data-ja-resources">Data ja Resources</h3>
+                <p>kaikki tiedot ladataan näihin luokkiin ja osa liitetään palvelimeen:</p>
+                <ul>
+                    <li>Dposition.cs</li>
+                    <li>Dposition2.cs</li>
+                    <li>Dsound.cs</li>
+                </ul>
+                <p>Resources-kansiossa ovat fontit ja myös joitain käytettyjä tiedostoja. </p>
+                <h3 id="deploy">Deploy</h3>
+                <pre><code>-<span class="ruby"> Android Emulator 
+</span>    -<span class="ruby"> Pixel <span class="hljs-number">5</span> (Android <span class="hljs-number">13.0</span>)</span>
+                </code></pre>
+                <h3 id="julkaisu">Julkaisu</h3>
+                <p>Google Store: Kohta</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-icons">
+            <a href="https://github.com/Richard-Rico" target="_blank" title="GitHub"><i class="fa fa-github fa-3x"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/richard-rico" target="_blank" title="LinkedIn"><i
+                    class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+        </div>
+        © Richard Rico 2023
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
